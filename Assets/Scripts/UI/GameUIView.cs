@@ -23,6 +23,7 @@ public class GameUIView : MonoBehaviour
     {
         tryAgainButton.onClick.AddListener(OnTryAgainButtonClicked);
         quitButton.onClick.AddListener(OnQuitButtonClicked);
+        EventService.Instance.OnKeyPickedUp.AddListener(OnKeyEquipped);
     }
     public void UpdateInsanity(float playerSanity) => insanityImage.rectTransform.localScale = new Vector3(1, playerSanity, 1);
     private void OnKeyEquipped(int keys) => keysFoundText.SetText($"Keys Found: {keys}/3");

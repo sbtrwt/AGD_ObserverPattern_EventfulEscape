@@ -27,7 +27,7 @@ public class PlayerController
         this.playerScriptableObject.KeysEquipped = 0;
 
         EventService.Instance.OnLightSwitchToggled.AddListener(LightSwtichToggled);
-
+        EventService.Instance.OnKeyPickedUp.AddListener(onKeysPickedUp);
         playerState = PlayerState.InDark;
     }
     ~PlayerController()
@@ -85,5 +85,9 @@ public class PlayerController
             PlayerState = PlayerState.None;
         else
             PlayerState = PlayerState.InDark;
+    }
+    private void onKeysPickedUp(int keys)
+    {
+        KeysEquipped = keys;
     }
 }
