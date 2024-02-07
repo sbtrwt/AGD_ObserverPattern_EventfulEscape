@@ -1985,6 +1985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sanityLevel: 100
   sanityDropRate: 0.2
+  sanityDropAmountPerEvent: 10
 --- !u!114 &4600010124367288004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2365,6 +2366,18 @@ PrefabInstance:
       propertyPath: soundService
       value: 
       objectReference: {fileID: 203687011}
+    - target: {fileID: 3592535717886177893, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.8785
+      objectReference: {fileID: 0}
+    - target: {fileID: 3592535717886177893, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3592535717886177893, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.97
+      objectReference: {fileID: 0}
     - target: {fileID: 4917009220679058258, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
       propertyPath: target
       value: 
