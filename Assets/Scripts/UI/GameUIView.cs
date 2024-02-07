@@ -29,5 +29,11 @@ public class GameUIView : MonoBehaviour
     private void OnKeyEquipped(int keys) => keysFoundText.SetText($"Keys Found: {keys}/3");
     private void OnQuitButtonClicked() => Application.Quit();
     private void OnTryAgainButtonClicked() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    private void setRedVignette()
+    {
+        redVignette.enabled = true;
+        redVignette.canvasRenderer.SetAlpha(0.5f);
+        redVignette.CrossFadeAlpha(0, 5, false);
+    }
 }
 
