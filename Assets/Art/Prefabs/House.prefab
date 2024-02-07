@@ -1221,8 +1221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rats: {fileID: 4740602442605894, guid: 8f561eafab2e3cf49b019dab857fe618, type: 3}
-  target: {fileID: 0}
-  soundToPlay: 0
+  target: {fileID: 4600010124790483095, guid: ef2329c091c69554cb8ee6298a72242b, type: 3}
+  soundToPlay: 7
 --- !u!65 &4831058038929088593
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11173,6 +11173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb1030b30bb78a24282ed6b17523aa48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundType: 9
 --- !u!1 &6752750672456008635
 GameObject:
   m_ObjectHideFlags: 0
@@ -18526,8 +18527,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rats: {fileID: 8986141076846673366, guid: a1c7aeb355244aa4b909042b10fe5a23, type: 3}
-  target: {fileID: 0}
-  soundToPlay: 0
+  target: {fileID: 4600010124790483095, guid: ef2329c091c69554cb8ee6298a72242b, type: 3}
+  soundToPlay: 7
 --- !u!65 &8241667997132989364
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -13,13 +13,15 @@ public class PlayerSanity : MonoBehaviour
        
         EventService.Instance.OnRatRush.AddListener(OnSupernaturalEvent);
         EventService.Instance.OnSkullDrop.AddListener(OnSupernaturalEvent);
+        EventService.Instance.OnPotionDrinkEvent.AddListener(OnDrankPotion);
     }
 
     private void OnDisable()
     {
         
         EventService.Instance.OnRatRush.RemoveListener(OnSupernaturalEvent);
-        EventService.Instance.OnSkullDrop.AddListener(OnSupernaturalEvent);
+        EventService.Instance.OnSkullDrop.RemoveListener(OnSupernaturalEvent);
+        EventService.Instance.OnPotionDrinkEvent.RemoveListener(OnDrankPotion);
     }
     private void Start()
     {
@@ -47,13 +49,12 @@ public class PlayerSanity : MonoBehaviour
         return sanityDrop;
     }
 
-    private void decreaseSanity(float amountToDecrease)
+    private void decreaseSanity(float amountToIncrease)
     {
-        Mathf.Floor(sanityLevel -= amountToDecrease);
-        if (sanityLevel <= 0)
+        Mathf.Floor(sanityLevel += amountToIncrease);
+        if (sanityLevel > 100)
         {
-            sanityLevel = 0;
-            GameService.Instance.GameOver();
+            sanityLevel = 100;
         }
         GameService.Instance.GetGameUI().UpdateInsanity(1f - sanityLevel / maxSanity);
     }
